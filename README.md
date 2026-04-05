@@ -49,7 +49,7 @@ With agentic-memory:
 npm install agentic-memory
 
 # Python
-pip install agentic-memory
+pip install agentic-memory-ai
 ```
 
 ---

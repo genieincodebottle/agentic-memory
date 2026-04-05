@@ -3,11 +3,11 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "agentic-memory"
+name = "agentic-memory-ai"
 version = "0.1.0"
 description = "Framework-agnostic memory layer for AI agents. Multi-signal retrieval, conflict detection, typed decay, checkpointing. Zero dependencies."
-readme = "../README.md"
-license = "MIT"
+readme = {file = "../README.md", content-type = "text/markdown"}
+license = {text = "MIT"}
 requires-python = ">=3.10"
 authors = [
     { name = "genieincodebottle" },
@@ -39,6 +39,9 @@ Issues = "https://github.com/genieincodebottle/agentic-memory/issues"
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["agentic_memory"]
 
 [project.optional-dependencies]
 dev = ["pytest>=8.0", "pytest-asyncio>=0.23"]
