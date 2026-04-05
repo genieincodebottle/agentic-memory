@@ -4,6 +4,8 @@ dist/
 .test-memory.json
 .nonexistent.json
 coverage/
+.npmrc
+.env
 
 # Python
 __pycache__/
