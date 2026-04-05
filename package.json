@@ -1,0 +1,76 @@
+{
+  "name": "agentic-memory",
+  "version": "0.1.0",
+  "description": "Framework-agnostic memory layer for AI agents. Multi-signal retrieval, conflict detection, typed decay, checkpointing. Zero dependencies.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./adapters/openai": {
+      "types": "./dist/adapters/openai.d.ts",
+      "import": "./dist/adapters/openai.mjs",
+      "require": "./dist/adapters/openai.js"
+    },
+    "./adapters/voyageai": {
+      "types": "./dist/adapters/voyageai.d.ts",
+      "import": "./dist/adapters/voyageai.mjs",
+      "require": "./dist/adapters/voyageai.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts src/adapters/openai.ts src/adapters/voyageai.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts src/adapters/openai.ts src/adapters/voyageai.ts --format cjs,esm --dts --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "memory",
+    "agentic",
+    "llm",
+    "context-management",
+    "multi-agent",
+    "state-management",
+    "conflict-detection",
+    "checkpoint",
+    "retrieval",
+    "rag",
+    "anthropic",
+    "openai",
+    "langchain",
+    "vercel-ai"
+  ],
+  "author": "genieincodebottle",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/genieincodebottle/agentic-memory"
+  },
+  "homepage": "https://github.com/genieincodebottle/agentic-memory#readme",
+  "bugs": {
+    "url": "https://github.com/genieincodebottle/agentic-memory/issues"
+  },
+  "devDependencies": {
+    "@rollup/rollup-win32-x64-msvc": "^4.60.1",
+    "@types/node": "^25.5.2",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

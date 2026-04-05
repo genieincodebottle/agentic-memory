@@ -1,0 +1,44 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentic-memory"
+version = "0.1.0"
+description = "Framework-agnostic memory layer for AI agents. Multi-signal retrieval, conflict detection, typed decay, checkpointing. Zero dependencies."
+readme = "../README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+    { name = "genieincodebottle" },
+]
+keywords = [
+    "ai", "agent", "memory", "agentic", "llm",
+    "context-management", "multi-agent", "state-management",
+    "conflict-detection", "checkpoint", "retrieval", "rag",
+    "anthropic", "openai", "langchain",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/genieincodebottle/agentic-memory"
+Repository = "https://github.com/genieincodebottle/agentic-memory"
+Issues = "https://github.com/genieincodebottle/agentic-memory/issues"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23"]

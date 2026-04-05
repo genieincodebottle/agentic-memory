@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="simGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+    <linearGradient id="recGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="impGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f97316"/>
+      <stop offset="100%" style="stop-color:#fb923c"/>
+    </linearGradient>
+    <linearGradient id="taskGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#4ade80"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="700" height="280" rx="16" fill="url(#bg2)"/>
+
+  <text x="350" y="36" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="700">Multi-Signal Retrieval</text>
+  <text x="350" y="56" text-anchor="middle" fill="#64748b" font-size="12">Not just similarity - four signals combined into one score</text>
+
+  <!-- Labels -->
+  <text x="40" y="102" fill="#93c5fd" font-size="14" font-weight="600">Similarity</text>
+  <text x="40" y="148" fill="#c4b5fd" font-size="14" font-weight="600">Recency</text>
+  <text x="40" y="194" fill="#fdba74" font-size="14" font-weight="600">Importance</text>
+  <text x="40" y="240" fill="#86efac" font-size="14" font-weight="600">Task Relevance</text>
+
+  <!-- Bar backgrounds -->
+  <rect x="170" y="86" width="360" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <rect x="170" y="132" width="360" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <rect x="170" y="178" width="360" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+  <rect x="170" y="224" width="360" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+
+  <!-- Filled bars (proportional to weight) -->
+  <rect x="170" y="86" width="144" height="24" rx="12" fill="url(#simGrad)" opacity="0.9"/>
+  <rect x="170" y="132" width="90" height="24" rx="12" fill="url(#recGrad)" opacity="0.9"/>
+  <rect x="170" y="178" width="72" height="24" rx="12" fill="url(#impGrad)" opacity="0.9"/>
+  <rect x="170" y="224" width="54" height="24" rx="12" fill="url(#taskGrad)" opacity="0.9"/>
+
+  <!-- Weight labels -->
+  <text x="555" y="103" fill="#93c5fd" font-size="14" font-weight="700">0.40</text>
+  <text x="555" y="149" fill="#c4b5fd" font-size="14" font-weight="700">0.25</text>
+  <text x="555" y="195" fill="#fdba74" font-size="14" font-weight="700">0.20</text>
+  <text x="555" y="241" fill="#86efac" font-size="14" font-weight="700">0.15</text>
+
+  <!-- Descriptions -->
+  <text x="605" y="103" fill="#94a3b8" font-size="11">semantic match</text>
+  <text x="605" y="149" fill="#94a3b8" font-size="11">how fresh</text>
+  <text x="605" y="195" fill="#94a3b8" font-size="11">hard / soft</text>
+  <text x="605" y="241" fill="#94a3b8" font-size="11">current goal</text>
+</svg>

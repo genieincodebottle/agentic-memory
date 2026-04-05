@@ -1,0 +1,14 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.test-memory.json
+.nonexistent.json
+coverage/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+build/
+dist/
