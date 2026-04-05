@@ -37,7 +37,7 @@ With agentic-memory:
 ## Where it fits
 
 <p align="center">
-  <img src="assets/architecture.svg" alt="Architecture diagram" width="720"/>
+  <img src="https://raw.githubusercontent.com/genieincodebottle/agentic-memory/master/assets/architecture.svg" alt="Architecture diagram" width="720"/>
 </p>
 
 ---
@@ -187,7 +187,7 @@ asyncio.run(main())
 RAG gives you "topically related" results. Agents need more than that.
 
 <p align="center">
-  <img src="assets/retrieval-signals.svg" alt="Multi-signal retrieval" width="640"/>
+  <img src="https://raw.githubusercontent.com/genieincodebottle/agentic-memory/master/assets/retrieval-signals.svg" alt="Multi-signal retrieval" width="640"/>
 </p>
 
 ```typescript
@@ -202,7 +202,7 @@ const results = await memory.retrieve({
 ### 2. Conflict detection (catch contradictions before they ship)
 
 <p align="center">
-  <img src="assets/conflict-detection.svg" alt="Conflict detection flow" width="640"/>
+  <img src="https://raw.githubusercontent.com/genieincodebottle/agentic-memory/master/assets/conflict-detection.svg" alt="Conflict detection flow" width="640"/>
 </p>
 
 ```typescript
@@ -220,7 +220,7 @@ Uses negation detection, antonym matching, and change-language detection - not j
 ### 3. Typed decay (a peanut allergy != a favorite color)
 
 <p align="center">
-  <img src="assets/typed-decay.svg" alt="Typed decay curves" width="640"/>
+  <img src="https://raw.githubusercontent.com/genieincodebottle/agentic-memory/master/assets/typed-decay.svg" alt="Typed decay curves" width="640"/>
 </p>
 
 ```typescript
@@ -247,7 +247,7 @@ const deletedCount = await memory.cleanup('user:123');
 A 40-minute agent workflow shouldn't lose everything when context fills up.
 
 <p align="center">
-  <img src="assets/checkpoint-flow.svg" alt="Checkpoint and rehydrate flow" width="640"/>
+  <img src="https://raw.githubusercontent.com/genieincodebottle/agentic-memory/master/assets/checkpoint-flow.svg" alt="Checkpoint and rehydrate flow" width="640"/>
 </p>
 
 ```typescript
