@@ -48,7 +48,7 @@
   <!-- Step 4: Build Prompt -->
   <rect x="450" y="48" width="100" height="56" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#hs)"/>
   <text x="500" y="70" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">STEP 4</text>
-  <text x="500" y="88" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="600">Prompt + ctx</text>
+  <text x="500" y="88" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="600">Prompt + context</text>
 
   <path d="M550,76 L572,76" stroke="#475569" stroke-width="1.2" fill="none" marker-end="url(#ha)"/>
 
