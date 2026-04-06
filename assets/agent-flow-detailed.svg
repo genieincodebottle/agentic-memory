@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 1520" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="dbg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#131c2e"/>
+    </linearGradient>
+    <filter id="ds" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+    <marker id="da" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7" fill="#475569"/>
+    </marker>
+    <marker id="dag" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7" fill="#4ade80"/>
+    </marker>
+    <marker id="dar" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7" fill="#f87171"/>
+    </marker>
+    <marker id="dab" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7" fill="#60a5fa"/>
+    </marker>
+  </defs>
+
+  <rect width="940" height="1520" rx="16" fill="url(#dbg)"/>
+
+  <!-- Title -->
+  <text x="470" y="36" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="700">Complete Agent Flow: Prompt to Response</text>
+  <text x="470" y="56" text-anchor="middle" fill="#64748b" font-size="12">Every step from user input to final response, showing exactly where agentic-memory plugs in</text>
+
+  <!-- Legend -->
+  <rect x="240" y="72" width="12" height="12" rx="3" fill="#1a3a2a" stroke="#4ade80" stroke-width="1.5"/>
+  <text x="260" y="83" fill="#86efac" font-size="11" font-weight="600">agentic-memory</text>
+  <rect x="380" y="72" width="12" height="12" rx="3" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="400" y="83" fill="#94a3b8" font-size="11">your agent code</text>
+  <rect x="530" y="72" width="12" height="12" rx="3" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="550" y="83" fill="#93c5fd" font-size="11">LLM provider</text>
+
+  <!-- ═══════ STEP 1: USER INPUT ═══════ -->
+  <rect x="60" y="105" width="820" height="90" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#ds)"/>
+  <!-- Step number badge -->
+  <rect x="75" y="115" width="24" height="24" rx="12" fill="#334155"/>
+  <text x="87" y="132" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="700">1</text>
+  <text x="115" y="132" fill="#e2e8f0" font-size="15" font-weight="700">Receive User Input</text>
+  <text x="815" y="132" text-anchor="end" fill="#475569" font-size="10">YOUR CODE</text>
+
+  <text x="115" y="158" fill="#94a3b8" font-size="12">Your agent receives the raw user message. Nothing special here.</text>
+  <rect x="115" y="168" width="380" height="20" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="125" y="182" fill="#fbbf24" font-size="11" font-family="'Consolas', monospace">input = "Order me a steak dinner for tonight"</text>
+
+  <!-- Arrow down -->
+  <path d="M470,195 L470,218" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#da)"/>
+
+  <!-- ═══════ STEP 2: RETRIEVE CONTEXT ═══════ -->
+  <rect x="60" y="225" width="820" height="155" rx="10" fill="#122219" stroke="#4ade80" stroke-width="2" filter="url(#ds)"/>
+  <rect x="75" y="235" width="24" height="24" rx="12" fill="#166534"/>
+  <text x="87" y="252" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">2</text>
+  <text x="115" y="252" fill="#4ade80" font-size="15" font-weight="700">Retrieve Memory Context</text>
+  <text x="815" y="252" text-anchor="end" fill="#4ade80" font-size="10" font-weight="600">agentic-memory</text>
+
+  <text x="115" y="278" fill="#94a3b8" font-size="12">BEFORE calling the LLM, ask memory: "What do I already know that's relevant?"</text>
+
+  <!-- Code block -->
+  <rect x="115" y="292" width="350" height="72" rx="6" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.5"/>
+  <text x="125" y="310" fill="#86efac" font-size="11" font-family="'Consolas', monospace">memory.retrieve({</text>
+  <text x="125" y="326" fill="#86efac" font-size="11" font-family="'Consolas', monospace">  query: "steak dinner order",</text>
+  <text x="125" y="342" fill="#86efac" font-size="11" font-family="'Consolas', monospace">  scope: "user:42",</text>
+  <text x="125" y="358" fill="#86efac" font-size="11" font-family="'Consolas', monospace">})</text>
+
+  <!-- Returns -->
+  <rect x="500" y="292" width="360" height="72" rx="6" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.5"/>
+  <text x="510" y="307" fill="#64748b" font-size="10">Returns (ranked by 4 signals):</text>
+  <text x="510" y="326" fill="#f87171" font-size="11" font-weight="600">[0.92] "User is vegetarian"</text>
+  <text x="770" y="326" fill="#475569" font-size="9">hard</text>
+  <text x="510" y="342" fill="#fbbf24" font-size="11">[0.71] "User prefers quick meals"</text>
+  <text x="770" y="342" fill="#475569" font-size="9">soft</text>
+  <text x="510" y="358" fill="#f87171" font-size="11" font-weight="600">[0.65] "User allergic to peanuts"</text>
+  <text x="770" y="358" fill="#475569" font-size="9">hard</text>
+
+  <!-- Arrow down -->
+  <path d="M470,380 L470,403" stroke="#4ade80" stroke-width="1.5" fill="none" marker-end="url(#dag)"/>
+
+  <!-- ═══════ STEP 3: CONFLICT CHECK ═══════ -->
+  <rect x="60" y="410" width="820" height="170" rx="10" fill="#122219" stroke="#4ade80" stroke-width="2" filter="url(#ds)"/>
+  <rect x="75" y="420" width="24" height="24" rx="12" fill="#166534"/>
+  <text x="87" y="437" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">3</text>
+  <text x="115" y="437" fill="#4ade80" font-size="15" font-weight="700">Check for Conflicts</text>
+  <text x="815" y="437" text-anchor="end" fill="#4ade80" font-size="10" font-weight="600">agentic-memory</text>
+
+  <text x="115" y="462" fill="#94a3b8" font-size="12">Does the user's request contradict anything stored? Negation + antonym + semantic analysis.</text>
+
+  <!-- Code -->
+  <rect x="115" y="476" width="350" height="38" rx="6" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.5"/>
+  <text x="125" y="494" fill="#86efac" font-size="11" font-family="'Consolas', monospace">memory.checkConflicts(</text>
+  <text x="125" y="508" fill="#86efac" font-size="11" font-family="'Consolas', monospace">  "Order a steak dinner", "user:42")</text>
+
+  <!-- Conflict result -->
+  <rect x="500" y="476" width="360" height="38" rx="6" fill="#2d1515" stroke="#f87171" stroke-width="1"/>
+  <text x="515" y="494" fill="#f87171" font-size="13" font-weight="700">CONFLICT DETECTED</text>
+  <text x="515" y="510" fill="#fca5a5" font-size="11">confidence: 0.85 | action: clarify</text>
+
+  <!-- Branch: conflict vs no conflict -->
+  <rect x="115" y="528" width="350" height="40" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+  <text x="125" y="545" fill="#fbbf24" font-size="11" font-weight="600">IF conflict → ask user:</text>
+  <text x="125" y="560" fill="#e2e8f0" font-size="11">"You're vegetarian. Still want steak?"</text>
+
+  <rect x="500" y="528" width="360" height="40" rx="6" fill="#1e293b" stroke="#4ade80" stroke-width="1"/>
+  <text x="510" y="545" fill="#4ade80" font-size="11" font-weight="600">IF no conflict → proceed to Step 4</text>
+  <text x="510" y="560" fill="#94a3b8" font-size="11">Safe to call LLM with full context</text>
+
+  <!-- Arrow down -->
+  <path d="M470,580 L470,603" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#da)"/>
+
+  <!-- ═══════ STEP 4: BUILD PROMPT ═══════ -->
+  <rect x="60" y="610" width="820" height="130" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#ds)"/>
+  <rect x="75" y="620" width="24" height="24" rx="12" fill="#334155"/>
+  <text x="87" y="637" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="700">4</text>
+  <text x="115" y="637" fill="#e2e8f0" font-size="15" font-weight="700">Build Prompt with Memory Context</text>
+  <text x="815" y="637" text-anchor="end" fill="#475569" font-size="10">YOUR CODE</text>
+
+  <text x="115" y="660" fill="#94a3b8" font-size="12">Inject retrieved memories into the LLM prompt. The LLM now has full user context.</text>
+
+  <rect x="115" y="674" width="745" height="54" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="125" y="692" fill="#94a3b8" font-size="11" font-family="'Consolas', monospace">System: You are a helpful assistant.</text>
+  <text x="125" y="708" fill="#fbbf24" font-size="11" font-family="'Consolas', monospace">Context: User is vegetarian (confirmed override). Allergic to peanuts.</text>
+  <text x="125" y="724" fill="#94a3b8" font-size="11" font-family="'Consolas', monospace">User: "Order me a steak dinner for tonight"</text>
+
+  <!-- Arrow down -->
+  <path d="M470,740 L470,763" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#da)"/>
+
+  <!-- ═══════ STEP 5: LLM CALL ═══════ -->
+  <rect x="60" y="770" width="820" height="110" rx="10" fill="#152238" stroke="#3b82f6" stroke-width="1.5" filter="url(#ds)"/>
+  <rect x="75" y="780" width="24" height="24" rx="12" fill="#1e3a5f"/>
+  <text x="87" y="797" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">5</text>
+  <text x="115" y="797" fill="#60a5fa" font-size="15" font-weight="700">Call LLM</text>
+  <text x="815" y="797" text-anchor="end" fill="#60a5fa" font-size="10" font-weight="600">LLM PROVIDER</text>
+
+  <text x="115" y="822" fill="#94a3b8" font-size="12">Claude, GPT-4, Llama, Gemini - any provider. The memory context makes the response personalized.</text>
+
+  <rect x="115" y="838" width="745" height="30" rx="6" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.5"/>
+  <text x="125" y="858" fill="#93c5fd" font-size="12" font-weight="500">"I found a steakhouse nearby. Since you have a peanut allergy, I avoided places that use peanut oil."</text>
+
+  <!-- Arrow down -->
+  <path d="M470,880 L470,903" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#da)"/>
+
+  <!-- ═══════ STEP 6: STORE LEARNINGS ═══════ -->
+  <rect x="60" y="910" width="820" height="140" rx="10" fill="#122219" stroke="#4ade80" stroke-width="2" filter="url(#ds)"/>
+  <rect x="75" y="920" width="24" height="24" rx="12" fill="#166534"/>
+  <text x="87" y="937" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">6</text>
+  <text x="115" y="937" fill="#4ade80" font-size="15" font-weight="700">Store New Learnings</text>
+  <text x="815" y="937" text-anchor="end" fill="#4ade80" font-size="10" font-weight="600">agentic-memory</text>
+
+  <text x="115" y="962" fill="#94a3b8" font-size="12">After the interaction, save what the agent learned for future sessions.</text>
+
+  <!-- Two store examples -->
+  <rect x="115" y="978" width="365" height="58" rx="6" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.5"/>
+  <text x="125" y="996" fill="#86efac" font-size="10" font-family="'Consolas', monospace">memory.store({</text>
+  <text x="125" y="1010" fill="#86efac" font-size="10" font-family="'Consolas', monospace">  content: "User is no longer vegetarian",</text>
+  <text x="125" y="1024" fill="#f87171" font-size="10" font-family="'Consolas', monospace">  importance: "hard"  // never forgets</text>
+  <text x="125" y="1033" fill="#86efac" font-size="10" font-family="'Consolas', monospace">})</text>
+
+  <rect x="500" y="978" width="360" height="58" rx="6" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.5"/>
+  <text x="510" y="996" fill="#86efac" font-size="10" font-family="'Consolas', monospace">memory.store({</text>
+  <text x="510" y="1010" fill="#86efac" font-size="10" font-family="'Consolas', monospace">  content: "Ordered from SteakHouse",</text>
+  <text x="510" y="1024" fill="#fbbf24" font-size="10" font-family="'Consolas', monospace">  importance: "ephemeral"  // decays in 14d</text>
+  <text x="510" y="1033" fill="#86efac" font-size="10" font-family="'Consolas', monospace">})</text>
+
+  <!-- Arrow down -->
+  <path d="M470,1050 L470,1073" stroke="#475569" stroke-width="1.5" fill="none" marker-end="url(#da)"/>
+
+  <!-- ═══════ STEP 7: RETURN RESPONSE ═══════ -->
+  <rect x="60" y="1080" width="820" height="70" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#ds)"/>
+  <rect x="75" y="1090" width="24" height="24" rx="12" fill="#334155"/>
+  <text x="87" y="1107" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="700">7</text>
+  <text x="115" y="1107" fill="#e2e8f0" font-size="15" font-weight="700">Return Response to User</text>
+  <text x="815" y="1107" text-anchor="end" fill="#475569" font-size="10">YOUR CODE</text>
+
+  <text x="115" y="1136" fill="#e2e8f0" font-size="13">"I found a steakhouse nearby. Since you have a peanut allergy, I avoided places that use peanut oil."</text>
+
+  <!-- ═══════ DIVIDER ═══════ -->
+  <line x1="100" y1="1175" x2="840" y2="1175" stroke="#334155" stroke-width="1" stroke-dasharray="8,4"/>
+  <rect x="350" y="1165" width="240" height="22" rx="11" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="470" y="1180" text-anchor="middle" fill="#64748b" font-size="10" letter-spacing="1.5">BACKGROUND PROCESSES</text>
+
+  <!-- ═══════ STEP 8: DECAY ═══════ -->
+  <rect x="60" y="1200" width="395" height="145" rx="10" fill="#122219" stroke="#4ade80" stroke-width="1.5" filter="url(#ds)"/>
+  <rect x="75" y="1210" width="24" height="24" rx="12" fill="#166534"/>
+  <text x="87" y="1227" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">8</text>
+  <text x="115" y="1227" fill="#4ade80" font-size="14" font-weight="700">Typed Decay</text>
+
+  <text x="80" y="1256" fill="#94a3b8" font-size="11">"Ordered from SteakHouse"</text>
+  <text x="80" y="1274" fill="#64748b" font-size="10">Day 1: ████████████ 1.0</text>
+  <text x="80" y="1290" fill="#64748b" font-size="10">Day 7: ███████      0.61</text>
+  <text x="80" y="1306" fill="#64748b" font-size="10">Day 14: ████         0.37</text>
+  <text x="80" y="1322" fill="#f87171" font-size="10">Day 30: ░            cleaned up</text>
+
+  <text x="290" y="1256" fill="#4ade80" font-size="11" font-weight="600">"Allergic to peanuts"</text>
+  <text x="290" y="1274" fill="#4ade80" font-size="10">importance: hard</text>
+  <text x="290" y="1290" fill="#4ade80" font-size="10">NEVER decays</text>
+  <text x="290" y="1306" fill="#4ade80" font-size="10">████████████ forever</text>
+
+  <!-- ═══════ STEP 9: CHECKPOINT ═══════ -->
+  <rect x="485" y="1200" width="395" height="145" rx="10" fill="#122219" stroke="#4ade80" stroke-width="1.5" filter="url(#ds)"/>
+  <rect x="500" y="1210" width="24" height="24" rx="12" fill="#166534"/>
+  <text x="512" y="1227" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">9</text>
+  <text x="540" y="1227" fill="#4ade80" font-size="14" font-weight="700">Checkpoint (if context overflows)</text>
+
+  <text x="505" y="1256" fill="#94a3b8" font-size="11">When context window fills up mid-workflow:</text>
+
+  <rect x="505" y="1268" width="352" height="62" rx="6" fill="#0f172a" stroke="#1e3a5f" stroke-width="0.5"/>
+  <text x="515" y="1286" fill="#86efac" font-size="10" font-family="'Consolas', monospace">memory.checkpoint({</text>
+  <text x="515" y="1300" fill="#86efac" font-size="10" font-family="'Consolas', monospace">  taskGraph, summary, toolOutputs</text>
+  <text x="515" y="1314" fill="#86efac" font-size="10" font-family="'Consolas', monospace">})</text>
+  <text x="730" y="1300" fill="#64748b" font-size="10">saves state</text>
+
+  <text x="505" y="1338" fill="#94a3b8" font-size="10">After reset: </text>
+  <text x="575" y="1338" fill="#86efac" font-size="10" font-family="'Consolas', monospace">memory.rehydrate(id)</text>
+  <text x="730" y="1338" fill="#64748b" font-size="10">resume</text>
+
+  <!-- ═══════ BOTTOM SUMMARY ═══════ -->
+  <rect x="60" y="1370" width="820" height="135" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="470" y="1396" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="700">Summary: agentic-memory is NOT the agent - it's the agent's memory system</text>
+
+  <text x="110" y="1425" fill="#4ade80" font-size="12" font-weight="600">Steps 2, 3, 6, 8, 9</text>
+  <text x="290" y="1425" fill="#94a3b8" font-size="12">= agentic-memory (retrieve, conflict check, store, decay, checkpoint)</text>
+
+  <text x="110" y="1450" fill="#94a3b8" font-size="12">Steps 1, 4, 7</text>
+  <text x="290" y="1450" fill="#94a3b8" font-size="12">= your agent code (receive input, build prompt, return response)</text>
+
+  <text x="110" y="1475" fill="#60a5fa" font-size="12">Step 5</text>
+  <text x="290" y="1475" fill="#94a3b8" font-size="12">= LLM provider (Claude, GPT-4, Llama, Gemini - any)</text>
+
+  <text x="470" y="1500" text-anchor="middle" fill="#64748b" font-size="11">It sits between your agent logic and the LLM, providing context before calls and storing learnings after.</text>
+</svg>

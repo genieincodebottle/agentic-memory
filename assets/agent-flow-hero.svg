@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <linearGradient id="hbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <filter id="hs" x="-2%" y="-8%" width="104%" height="116%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-opacity="0.3"/>
+    </filter>
+    <marker id="ha" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#475569"/>
+    </marker>
+    <marker id="hag" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#4ade80"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="160" rx="12" fill="url(#hbg)"/>
+
+  <!-- Title -->
+  <text x="450" y="24" text-anchor="middle" fill="#64748b" font-size="11" font-weight="600" letter-spacing="1.5">AGENT FLOW: WHERE AGENTIC-MEMORY SITS</text>
+
+  <!-- Step 1: User Input -->
+  <rect x="20" y="48" width="100" height="56" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#hs)"/>
+  <text x="70" y="70" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">STEP 1</text>
+  <text x="70" y="88" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="600">User Input</text>
+
+  <path d="M120,76 L142,76" stroke="#475569" stroke-width="1.2" fill="none" marker-end="url(#ha)"/>
+
+  <!-- Step 2: Retrieve -->
+  <rect x="150" y="42" width="120" height="68" rx="8" fill="#1a3a2a" stroke="#4ade80" stroke-width="1.5" filter="url(#hs)"/>
+  <text x="210" y="60" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700">STEP 2</text>
+  <text x="210" y="76" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="600">Retrieve</text>
+  <text x="210" y="92" text-anchor="middle" fill="#86efac" font-size="9">memory.retrieve()</text>
+  <text x="210" y="104" text-anchor="middle" fill="#64748b" font-size="8">what do I know?</text>
+
+  <path d="M270,76 L292,76" stroke="#4ade80" stroke-width="1.2" fill="none" marker-end="url(#hag)"/>
+
+  <!-- Step 3: Conflict Check -->
+  <rect x="300" y="42" width="120" height="68" rx="8" fill="#1a3a2a" stroke="#4ade80" stroke-width="1.5" filter="url(#hs)"/>
+  <text x="360" y="60" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700">STEP 3</text>
+  <text x="360" y="76" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="600">Conflict?</text>
+  <text x="360" y="92" text-anchor="middle" fill="#86efac" font-size="9">checkConflicts()</text>
+  <text x="360" y="104" text-anchor="middle" fill="#64748b" font-size="8">safe to proceed?</text>
+
+  <path d="M420,76 L442,76" stroke="#475569" stroke-width="1.2" fill="none" marker-end="url(#ha)"/>
+
+  <!-- Step 4: Build Prompt -->
+  <rect x="450" y="48" width="100" height="56" rx="8" fill="#1e293b" stroke="#475569" stroke-width="1" filter="url(#hs)"/>
+  <text x="500" y="70" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">STEP 4</text>
+  <text x="500" y="88" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="600">Prompt + ctx</text>
+
+  <path d="M550,76 L572,76" stroke="#475569" stroke-width="1.2" fill="none" marker-end="url(#ha)"/>
+
+  <!-- Step 5: LLM -->
+  <rect x="580" y="48" width="100" height="56" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" filter="url(#hs)"/>
+  <text x="630" y="70" text-anchor="middle" fill="#93c5fd" font-size="9" font-weight="600">STEP 5</text>
+  <text x="630" y="88" text-anchor="middle" fill="#e2e8f0" font-size="12" font-weight="600">LLM Call</text>
+
+  <path d="M680,76 L702,76" stroke="#475569" stroke-width="1.2" fill="none" marker-end="url(#ha)"/>
+
+  <!-- Step 6: Store -->
+  <rect x="710" y="42" width="120" height="68" rx="8" fill="#1a3a2a" stroke="#4ade80" stroke-width="1.5" filter="url(#hs)"/>
+  <text x="770" y="60" text-anchor="middle" fill="#4ade80" font-size="9" font-weight="700">STEP 6</text>
+  <text x="770" y="76" text-anchor="middle" fill="#e2e8f0" font-size="11" font-weight="600">Store New</text>
+  <text x="770" y="92" text-anchor="middle" fill="#86efac" font-size="9">memory.store()</text>
+  <text x="770" y="104" text-anchor="middle" fill="#64748b" font-size="8">save learnings</text>
+
+  <!-- Legend -->
+  <rect x="215" y="126" width="10" height="10" rx="2" fill="#1a3a2a" stroke="#4ade80" stroke-width="1"/>
+  <text x="232" y="135" fill="#86efac" font-size="10">= agentic-memory</text>
+
+  <rect x="360" y="126" width="10" height="10" rx="2" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+  <text x="377" y="135" fill="#94a3b8" font-size="10">= your code</text>
+
+  <rect x="490" y="126" width="10" height="10" rx="2" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="507" y="135" fill="#93c5fd" font-size="10">= LLM provider</text>
+
+  <!-- Background label: + decay + checkpoint -->
+  <text x="770" y="140" text-anchor="middle" fill="#64748b" font-size="9">+ decay() + checkpoint() in background</text>
+</svg>

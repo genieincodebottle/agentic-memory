@@ -34,11 +34,29 @@ With agentic-memory:
 
 ---
 
-## Where it fits
+## How it works in your agent
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/genieincodebottle/agentic-memory/master/assets/agent-flow-hero.svg" alt="Agent flow overview" width="820"/>
+</p>
+
+<details>
+<summary><strong>Click to see the full 9-step flow (detailed diagram)</strong></summary>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/genieincodebottle/agentic-memory/master/assets/agent-flow-detailed.svg" alt="Complete agent flow - prompt to response" width="820"/>
+</p>
+
+</details>
+
+<details>
+<summary><strong>Click to see the component architecture</strong></summary>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/genieincodebottle/agentic-memory/master/assets/architecture.svg" alt="Architecture diagram" width="720"/>
 </p>
+
+</details>
 
 ---
 
