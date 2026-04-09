@@ -18,7 +18,7 @@ Every AI agent framework gives you tools, chains, and orchestration. None of the
 Without agentic-memory:
 
   Session 1: "I'm vegetarian"      -->  stored somewhere
-  Session 5: "Find me a recipe"    -->  agent suggests steak
+  Session 5: "Find me a recipe"    -->  agent suggests egg
   40-min workflow                   -->  context fills up, loses all progress
   Multi-agent system                -->  agents duplicate each other's work
 ```
@@ -27,7 +27,7 @@ Without agentic-memory:
 With agentic-memory:
 
   Session 1: "I'm vegetarian"      -->  stored as hard constraint (never decays)
-  Session 5: "Find me steak"       -->  conflict detected, agent asks to confirm
+  Session 5: "Find me egg"          -->  conflict detected, agent asks to confirm
   40-min workflow                   -->  checkpoint saves state, resumes after overflow
   Multi-agent system                -->  scoped memory, no cross-contamination
 ```
@@ -121,7 +121,7 @@ const prompt = `
 // ── Session 5: Catch contradictions ──
 // User (or another agent) tries something that conflicts
 const conflicts = await memory.checkConflicts(
-  'Order a steak dinner for the user',
+  'Order an egg dinner for the user',
   'user:42',
 );
 
@@ -185,7 +185,7 @@ async def main():
 
     # Catch contradictions
     conflicts = await memory.check_conflicts(
-        "Order a steak dinner for the user", "user:42"
+        "Order an egg dinner for the user", "user:42"
     )
     if conflicts:
         print(f"Action: {conflicts[0].action.value}")  # 'clarify'
@@ -224,7 +224,7 @@ const results = await memory.retrieve({
 </p>
 
 ```typescript
-const conflicts = await memory.checkConflicts('Order a steak dinner', 'user:123');
+const conflicts = await memory.checkConflicts('Order an egg dinner', 'user:123');
 // Returns:
 // {
 //   confidence: 0.85,

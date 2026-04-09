@@ -125,7 +125,7 @@ async def test_conflict_negation():
         scope="user:1",
     )
     conflicts = await memory.check_conflicts(
-        "User is not vegetarian and wants steak", "user:1"
+        "User is not vegetarian and wants egg", "user:1"
     )
     assert len(conflicts) > 0
     assert conflicts[0].action.value == "clarify"

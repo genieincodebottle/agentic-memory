@@ -37,7 +37,7 @@
   <!-- Incoming -->
   <rect x="475" y="80" width="200" height="56" rx="8" fill="#3d1515" stroke="#f87171" stroke-width="1.5" filter="url(#sh3)"/>
   <text x="575" y="100" text-anchor="middle" fill="#fca5a5" font-size="10" font-weight="600">INCOMING TASK</text>
-  <text x="575" y="122" text-anchor="middle" fill="#e2e8f0" font-size="13">"Order a steak dinner"</text>
+  <text x="575" y="122" text-anchor="middle" fill="#e2e8f0" font-size="13">"Order an egg dinner"</text>
 
   <!-- Result -->
   <rect x="200" y="170" width="300" height="52" rx="8" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5" filter="url(#sh3)"/>

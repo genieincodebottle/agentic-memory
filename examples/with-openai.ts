@@ -8,7 +8,7 @@
  * What this demo shows:
  *   1. Store user preferences with real embeddings
  *   2. Retrieve relevant context before an LLM call
- *   3. Catch a dangerous contradiction (vegetarian vs steak)
+ *   3. Catch a dangerous contradiction (vegetarian vs egg)
  *   4. Make an LLM call that uses memory context
  */
 
@@ -114,10 +114,10 @@ Give a short, specific suggestion (2-3 sentences).`;
   console.log(`\n  LLM Response: ${response}\n`);
 
   // ── Step 4: Conflict detection ──
-  console.log('Step 4: Another agent tries to order steak...');
+  console.log('Step 4: Another agent tries to order egg...');
 
   const conflicts = await memory.checkConflicts(
-    'Order a ribeye steak dinner for the user',
+    'Order an egg dinner for the user',
     'user:demo',
   );
 

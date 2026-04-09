@@ -184,7 +184,7 @@ class TestConflict:
             scope="user:1",
             importance=ImportanceLevel.HARD,
         )
-        conflicts = await memory.check_conflicts("User wants steak", "user:2")
+        conflicts = await memory.check_conflicts("User wants egg", "user:2")
         assert len(conflicts) == 0
 
     @pytest.mark.asyncio

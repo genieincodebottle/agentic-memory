@@ -33,7 +33,7 @@
 
   <!-- Arrow 1->2 -->
   <path d="M190,85 L230,85" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
-  <text x="210" y="78" text-anchor="middle" fill="#64748b" font-size="9">"Order steak"</text>
+  <text x="210" y="78" text-anchor="middle" fill="#64748b" font-size="9">"Order egg"</text>
 
   <!-- Step 2: Agent checks memory FIRST -->
   <rect x="240" y="48" width="200" height="76" rx="10" fill="#1a3a2a" stroke="#4ade80" stroke-width="2" filter="url(#shadow)"/>

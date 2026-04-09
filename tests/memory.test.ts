@@ -114,7 +114,7 @@ describe('AgentMemory', () => {
       });
 
       const conflicts = await memory.checkConflicts(
-        'User is not vegetarian and wants steak',
+        'User is not vegetarian and wants egg',
         'user:1'
       );
 

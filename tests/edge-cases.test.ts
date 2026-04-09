@@ -193,7 +193,7 @@ describe('Edge Cases: Conflict Detection', () => {
   it('should not cross-contaminate scopes in conflict check', async () => {
     await memory.store({ content: 'User is vegetarian', scope: 'user:1', importance: 'hard' });
     // Check conflict in a different scope
-    const conflicts = await memory.checkConflicts('User wants steak', 'user:2');
+    const conflicts = await memory.checkConflicts('User wants egg', 'user:2');
     expect(conflicts.length).toBe(0);
   });
 
